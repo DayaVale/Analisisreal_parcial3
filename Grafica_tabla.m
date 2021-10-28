@@ -27,7 +27,7 @@ function Grafica_tabla(ps_k,ks,as_k,bs_k,f_a,f_b,f_pks,p_k,f_pk,x,y,animacion)
             %plot(ax,x,zeros(size(x)) + f_pks(i))
             %plot(ax,zeros(size(y)) + ps_k(i),y)
             drawnow;
-            pause(0.01)
+            pause(0.3)
         end
     end
  c = num2str(round(p_k,4));

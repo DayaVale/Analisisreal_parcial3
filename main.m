@@ -1,14 +1,20 @@
 %% ---------------------------------- Punto 3 ------------------------------------------------------
 % Grafica visualización del 3
-n = [-20:0:20];
-x = 1./n;
-y = 1./(sqrt(3).*n);
+n = [-100:100];
+x = 1./(n);
+y = sqrt(2)./n;
 f1 = @ (x) x.^2;
 f2 = @ (y) -y.^3;
 
 plot(x,f1(x),'-o')
 hold on
 plot(y,f2(y),'-o')
+grid on
+title('\textbf{Grafica visualizacion}', 'Interpreter', 'latex')
+xlabel('\textbf{Valores de la sucesion}', 'Interpreter','latex')
+ylabel('\textbf{F($X_n$)}', 'Interpreter','latex')
+legend('$X_n$','$Y_n$', 'Interpreter','latex')
+
 
 %% ------------------------------ Punto 4 -------------------------------------------------------------
 format long
@@ -35,7 +41,7 @@ f = @(x) log(x)- x.*cos(x);
 x = [a:0.0001:b]; % Puntos para graficar en x
 y = f(x); % Puntos de la imagen de los puntos de X
 
-[ps_k,ks,as_k,bs_k,f_a,f_b,f_pks,p_k,f_pk] = bolzano_inter (f,a,b,n,N,Tol); % Teorema de bolzano con Localización de raices
+[ps_k,ks,as_k,bs_k,f_a,f_b,f_pks,p_k,f_pk] = bolzano_inter(f,a,b,n,N,Tol); % Teorema de bolzano con Localización de raices
 Grafica_tabla(ps_k,ks,as_k,bs_k,f_a,f_b,f_pks,p_k,f_pk,x,y,true); %Mostrar la tabla y una grafica  que muestra el punto c y f(c) con animación
 
 
