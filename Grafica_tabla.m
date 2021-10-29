@@ -23,7 +23,7 @@ function Grafica_tabla(ps_k,ks,as_k,bs_k,f_a,f_b,f_pks,p_k,f_pk,x,y,animacion)
     else
         sz =size(f_pks);
        for i= 1:sz(2)
-            plot(ax,ps_k(i),f_pks(i),'-o');
+            plot(ax,ps_k(i),f_pks(i),'*');
             %plot(ax,x,zeros(size(x)) + f_pks(i))
             %plot(ax,zeros(size(y)) + ps_k(i),y)
             drawnow;
